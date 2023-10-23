@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIP zon</title>
+    <link rel="icon" href="download.png">
+</head>
+<style>
+    body{
+        background-image: url(./roof.jpg);
+        background-size: cover;
+        background-position: fixed;
+
+    }
+    .payment{
+       margin-top: 200px;
+       margin-left: 450px;
+       margin-right: 400px;
+       border-style: solid;
+       border-width: 2px 2px 2px 2px;
+       
+       padding: 20px;
+       padding-left: 30px;
+       height: 250px;
+       background-color: rgb(48, 47, 47);
+       opacity: 0.7;
+       box-shadow: 5px 2px 2px 2px black;
+    }
+    h1{
+        text-shadow: 2px 2px 2px red;
+        text-align: center;
+        padding-top: 10px;
+        margin-top: 5px;
+        color: rgb(201, 198, 198);
+    }
+    .radio1{
+        margin-left: 50px;
+    }
+    .Radioo{
+       /* position: absolute ; */
+         padding: 10px;
+         margin-left: 240px;
+         margin-top: -28px;
+         
+    }
+    .amount{
+        margin-left: 120px;
+        text-align: center;
+        padding-top: 10px;
+        border-radius: 15px;
+    }
+    .btn{
+        margin-left: 175px;
+        margin-top: 30px;
+        /* width: 100px; */
+        height: 50px;
+        width: 50px;
+        background-color: red;
+        color: white;
+        border-radius: 30px;
+        box-shadow: 1px 1px 1px 1px  rgb(129, 129, 129);
+       }
+       label{
+        color: rgb(201, 198, 198);
+       }
+    /* img{
+        margin-left: 50px;
+    } */
+
+    /* <img src="next button.png"  height="50px"> */
+</style>
+<body>
+    <div class="payment">
+       <h1>PAYMENT MODE</h1>
+       <div class="radio1">
+        <input type="radio" name="payment"><label>Cash on delivery</label>
+        </div>
+        <div class="Radioo">
+        <input type="radio" name="payment"><label>Gpay/phone pay</label><br>
+        </div>
+        <br>
+        <textarea class= "amount" value="number" placeholder="Enter your amount"></textarea><br>
+          <a href="///c%3A/Users/user2/Downloads/angadi/ap7.html"><button class="btn" type="button" onclick="playsound();">Done</button></a>
+    </div>
+    <script src="audio.js">
+
+ </script>
+    
+</body>
+</html>

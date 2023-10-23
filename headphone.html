@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"/>
+    <title>FLIP zon</title>
+    <link rel="icon" href="download.png"/>
+    <style>
+    .body1{
+        background-image: url(./background-g2ff54e9d8_1280.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .container{
+        margin-top: 90px;
+        margin-left: 240px;
+        display: flex;
+
+      }
+      .card:hover {
+        transform: scale(1.2);
+        z-index: 1;
+        box-shadow: 2px 2px 2px #000;
+      }
+      .card {
+        transition: 1s;
+        
+      }
+      .card-body {
+        background-color: purple;
+        /* margin-top: 50px; */
+      }
+      .card-title{
+        text-align: center;
+      }
+      .card-title a{
+        text-decoration: none;
+      }
+       .card-img-top{
+        width: 250px;
+        padding-top: 10px;
+       
+      }
+      
+      .pass{
+        margin-left: 30px;
+        width: 260px;
+        opacity: 0.9;
+        
+      }
+      .card-text{
+        color: aliceblue;
+        font-size: 15px;
+      }
+      .btn-1{
+        margin-left: 25%;
+        border: 2px;
+      }
+      .btn-1:hover{
+        color: blue;
+        border: blue;
+        background-color: aliceblue;
+
+      }
+      .three{
+        padding-left: 30px;
+        height: 250px;
+        padding-right:0px;
+        padding-top: 20px;
+        padding-bottom: 15px;
+      }
+      .btn-2{
+        margin-left: 17%;
+        
+        border: 2px;
+      }
+      .btn-2:hover{
+        color: blue;
+        border: blue;
+        background-color: aliceblue;
+      }
+      .first{
+        padding-left: 40px;
+        padding-bottom: 20px;
+        padding-right: 0px;
+        padding-top: 50px;
+        width: 200px;
+        height: 250px;
+       
+      }
+      h5{
+      color: rgb(15, 173, 226);
+      }
+     
+      .btn-3{
+        border: 2px;
+        margin-left: 16%;
+      }
+      .btn-3:hover{
+        color: blue;
+        border: blue;
+        background-color: aliceblue;
+      }
+      .add-cart{
+    
+    margin-left: 62px;
+
+   }
+
+    </style>
+
+</head>
+<body class="body1">
+    <div class="container">
+    <div class=" pass col-lg-3">
+          <div class="card"> 
+          <div class="card-img-top">    
+            <a href="mivi.html"><img src="c:\Users\user2\Downloads\mivi.webp" class="first" alt="..."/></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">MIVI Duopods</h5>
+              <p class="card-text">
+                MIVI Duopods K6 TWS Bluetooth Headset (Black,True Wireless) M.R.P.: ₹1,200.Get AXIS BANK Offer upto 5%.
+              </p>
+              <buttton type="btn" class="add-cart btn btn-primary btn-1">Add Cart</buttton>
+            </div>
+          </div>
+        </div>
+        
+        
+
+        <div class="pass col-lg-3">
+          <div class="card">
+            <div class="card-img-top">
+              <a href="zebronics.html"><img src="c:\Users\user2\Downloads\zebairbud.webp" class="secondimage" width="250px"  alt="..."/></a>
+           </div>
+            <div class="card-body">
+              <h5 class="card-title">zebronic</h5>
+              <p class="card-text">
+               ZEBRONIC ZEB-SOUND BOMB N1 TWS earbuds Bluetooth HeadsetM.R.P: ₹1,250.Get AXIS BANK Offer upto 5%.
+              </p>
+              <buttton type="btn" class="add-cart btn btn-primary btn-2">Add Cart</buttton>
+            </div>
+          </div>
+        </div>      
+      
+
+        <div class="pass col-lg-3">
+          <div class="card">
+            <div class="card-img-top">
+              <a href="airbuds.html"><img src="c:\Users\user2\Downloads\AirPods_Max.jpg" class="three" width="220px" alt="..." /></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Airpods Max</h5>
+              <p class="card-text">
+                APPLE New Airpods Max Bluetooth Headset (Sliver,On the ear).M.R.P:₹59,000.Get AXIS BANK Offer upto 5%
+              </p>
+              <buttton type="btn" class="add-cart btn btn-primary btn-3">Add Cart</buttton>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous">
+  </script>
+    <script>
+      let variable=document.querySelectorAll('.add-cart')
+      variable.forEach(element => { element.addEventListener("click", ()=>{
+       console.log("button clicked")
+       addCart(element);
+      })})
+   
+      let itemList=[]
+      function addCart(element){
+    let product=element.closest('.pass');
+    let title=product.querySelector('.card-title').innerText;
+    let price=product.querySelector('.card-text').innerText;
+    let imgSrc=product.querySelector('.card-img-top').getAttribute('src');
+    console.log(title,price,imgSrc);
+    
+    let newProduct={title,price,imgSrc}
+   
+    //Check Product already Exist in Cart
+    if(itemList.find((sakthi)=>sakthi.title==newProduct.title)){
+     alert("Product Already added in Cart");
+     return;
+    }
+    else{
+     itemList.push(newProduct);
+     console.log(itemList);
+     alert("Product Added successfully");
+    }
+   
+   
+   // let newProductElement= createCartProduct(title,price,imgSrc);
+   // let element=document.createElement('div');
+   // element.innerHTML=newProductElement;
+   // let cartBasket=document.querySelector('.cart-content');
+   // cartBasket.append(element);
+   // loadContent();
+   }
+   </script>
+</body>
+</html>
